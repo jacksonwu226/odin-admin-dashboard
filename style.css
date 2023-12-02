@@ -4,7 +4,7 @@ body{
 
 .container{
     display: grid;
-    grid-template: 1fr 6fr / clamp(200px, 30%, 405px) 3fr;
+    grid-template: 8rem 1fr / 405px 1fr;
     min-height: 100vh;
 }
 
@@ -51,7 +51,7 @@ body{
 /* main-content */
 .main-content{
   display: grid;
-  grid-template: 1fr 2fr/ 2fr 1fr;
+  grid-template: auto 1fr / 3fr 1fr;
 }
 .projects{
   grid-row: 1 / 3;
@@ -60,15 +60,15 @@ body{
   padding: 1rem;
 }
 
-.projects h2{
+.projects h2, .announcements h2, .trending h2{
   background-color: red;
   padding: 1rem;
   font-size: 1.5rem;
 }
 .project-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 250px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: auto;
   gap: 1rem;
 }
 .card-project{
@@ -84,7 +84,24 @@ body{
   justify-content: end;
   gap: 1rem;
 }
-.card-project .card-project-title{
+.card-project .card-project-title, 
+.card-announcement .card-announcement-title{
   font-size: 1.2rem;
   font-weight: bold;
+}
+.announcements{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 1rem;
+}
+.announcements-grid{
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 1px;
+  border-radius: 2rem;
+  justify-content: start;
+}
+.card-announcement{
+  padding: 1rem;
+  background-color: white;
 }
