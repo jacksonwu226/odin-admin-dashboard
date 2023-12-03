@@ -12,7 +12,6 @@ body{
 .sidebar{
     background-color: yellowgreen;
     grid-row: 1 / 3;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     gap: 7vh;
@@ -39,7 +38,6 @@ body{
     display: grid;
     gap: 25px;
     grid-template-columns: 1fr;
-    border: 1px solid red;
 }
 .header{
     background-color: gray;
@@ -51,7 +49,7 @@ body{
 /* main-content */
 .main-content{
   display: grid;
-  grid-template: auto 1fr / 3fr 1fr;
+  grid-template: auto auto 1fr / 3fr 1fr;
 }
 .projects{
   grid-row: 1 / 3;
@@ -61,14 +59,13 @@ body{
 }
 
 .projects h2, .announcements h2, .trending h2{
-  background-color: red;
   padding: 1rem;
   font-size: 1.5rem;
 }
 .project-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: auto;
+  /* grid-auto-rows: auto; */
   gap: 1rem;
 }
 .card-project{
@@ -100,8 +97,50 @@ body{
   gap: 1px;
   border-radius: 2rem;
   justify-content: start;
+  overflow: hidden;
 }
 .card-announcement{
   padding: 1rem;
   background-color: white;
+}
+
+/* Trending */
+.trending{
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.trending-grid{
+  display: grid;
+  grid-auto-rows: repeat(3, 1fr);
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+}
+.card-trending{
+  display: grid;
+  grid-template: auto auto / auto 1fr;
+
+  padding: 1rem;
+  row-gap: 1rem;
+  column-gap: 2rem;
+}
+.card-trending img{
+  grid-row: 1 / 3;
+  display: flex;
+  align-items: center;
+}
+.card-trending .card-trending-username,
+.card-trending .card-trending-headline
+{
+  font-size: 1rem;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+.card-trending .card-trending-username{
+  font-size: 1.1rem;
+  font-weight: bold;
 }
