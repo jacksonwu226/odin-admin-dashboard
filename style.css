@@ -1,10 +1,10 @@
 body{
-    max-height: 100vh;
+  
 }
 
 .container{
     display: grid;
-    grid-template: 8rem 1fr / 405px 1fr;
+    grid-template: auto 1fr / 405px 1fr;
     min-height: 100vh;
 }
 
@@ -74,6 +74,7 @@ body{
   padding: 1rem;
   display: grid;
   grid-template-rows: 1fr 4fr 1fr;
+  border-left: 1rem solid green; 
 }
 .card-project .card-project-links{
   display: grid;
@@ -129,7 +130,7 @@ body{
 .card-trending img{
   grid-row: 1 / 3;
   display: flex;
-  align-items: center;
+  align-self: center;
 }
 .card-trending .card-trending-username,
 .card-trending .card-trending-headline
@@ -143,4 +144,80 @@ body{
 .card-trending .card-trending-username{
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+.header-grid{
+  display: grid;
+  grid-template-columns: 3fr 1fr auto;
+  grid-template-rows: 1fr 2fr;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.search-bar{
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: auto 2fr;
+  gap: 1rem;
+}
+.search-bar img{
+  align-self: center;
+  justify-self: center;
+}
+.search-bar input{
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+}
+.user-notification-bar{
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  align-items: center;
+  justify-content: end;
+  padding: 1rem;
+  margin-right: 1rem;
+  gap: 2rem;
+}
+.profile-greeting{
+  grid-column: 1 / 2; 
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
+.profile-greeting .profile-icon{
+  grid-row: 1 / 3;
+}
+.profile-greeting .profile-icon{
+  justify-self: center;
+  align-self: center;
+}
+.profile-greeting .greeting-message{
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  align-self: end;
+}
+.profile-greeting .username-handler{
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  align-self: start;
+}
+.profile-links{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+}
+.profile-links button{
+  height: 50px;
+  width: 150px;
+  border-radius: 2rem;
 }
